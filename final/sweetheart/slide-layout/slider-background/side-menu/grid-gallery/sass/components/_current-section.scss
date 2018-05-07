@@ -1,0 +1,137 @@
+/*--------------------------------------------------------------
+# current section style
+--------------------------------------------------------------*/
+.page-wrapper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	section {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+		opacity: 0;
+		visibility: hidden;
+		
+		@include widther(768px) {
+			left: 10%;
+		}
+
+		@include transition-time(1s);
+
+		&:before {
+			content: "";
+			@include overlay(transparentize($white, 0.4));
+		}
+
+		* {
+			opacity: 0;
+		}
+	}
+
+	header {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1111;
+	}
+
+	.current-section {
+		background: white;
+		left: 0;
+		z-index: 1000;
+		overflow-y: hidden;
+		opacity: 1;
+		visibility: visible;
+
+		-webkit-transform: translate3d(0,0,0);
+		-moz-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+		* {
+			opacity: 1;
+		}
+
+		&:before {
+			content: "";
+			@include pattern-background(transparentize($white, 0.4), "../images/section-bg.png");
+			width: 100%;
+			height: 100%;
+		}
+
+		.section-holder {
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    height: 100%;
+		    width: 100%;
+		    overflow-y: auto;
+		    padding-top: 100px;
+		    
+		    @include media-query(991px) {
+		    	padding-top: 150px;
+		    }
+		    
+		    @include media-query(767px) {
+		    	padding-top: 120px;
+		    }
+		    
+		    .container {
+		    	padding-bottom: 100px;
+
+		    	@include widther(992px) {
+		    		padding-left: 100px;
+		    	}
+
+		    	@include media-query(767px) {
+		    		padding-bottom: 60px;
+		    	}
+		    }
+		}
+
+		.css-animation {
+			opacity: 0;
+		}
+
+		.fadeUpSlow {
+			-webkit-animation: fadeUpSlow 1.2s 1.2s forwards;
+			-moz-animation: fadeUpSlow 1.2s 1.2s forwards;
+			animation: fadeUpSlow 1.2s 1.2s forwards;
+		}	
+		
+		.fadeLeftSlow {
+			-webkit-animation: fadeLeftSlow 1.2s 1.2s forwards;
+			-moz-animation: fadeLeftSlow 1.2s 1.2s forwards;
+			animation: fadeLeftSlow 1.2s 1.2s forwards;
+		}	
+		
+		.fadeRightSlow {
+			-webkit-animation: fadeRightSlow 1.2s 1.2s forwards;
+			-moz-animation: fadeRightSlow 1.2s 1.2s forwards;
+			animation: fadeRightSlow 1.2s 1.2s forwards;
+		}	
+
+
+		/** event section animation **/
+		.left-half {
+			-webkit-animation: slideOutLeft 1.5s ease-out 3s forwards;
+			-moz-animation: slideOutLeft 1.5s ease-out 3s forwards;
+			animation: slideOutLeft 1.5s ease-out 3s forwards;
+		}	
+
+		.right-half {
+			-webkit-animation: slideOutRight 1.5s ease-out 3s forwards;
+			-moz-animation: slideOutRight 1.5s ease-out 3s forwards;
+			animation: slideOutRight 1.5s ease-out 3s forwards;
+		}
+
+		.clip {
+			-webkit-animation: clip-fade-out 0.5s 3s forwards;
+			-moz-animation: clip-fade-out 0.5s 3s forwards;
+			animation: clip-fade-out 0.5s 3s forwards;
+		}	
+
+	}
+}
