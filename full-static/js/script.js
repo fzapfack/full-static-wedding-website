@@ -311,13 +311,14 @@
     function map() {
 
         var locations = [
-            ['Hotel royal international khulna ', 22.8103888, 89.5619609,1],
-            ['City inn khulna', 22.820884, 89.551216,2],
+            ['Eglise Notre-Dame de l’Assomption ', 48.482372, 2.347270],
+            ['Mairie Bezons', 48.929423, 2.215711],
+            ['Yatch Club', 48.566430, 2.501438],
         ];
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: new google.maps.LatLng( 22.8103888, 89.5619609),
-            zoom: 12,
+            center: new google.maps.LatLng(48.736393, 2.311860),
+            zoom: 9,
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
 

@@ -1884,7 +1884,7 @@ footer .copyright {
 }
 
 .story .story-box .nav-tabs li {
-  width: 20%;
+  width: 25%;
   margin: 0;
   border-right: 1px solid #aa9a45;
 }
@@ -1960,6 +1960,8 @@ footer .copyright {
 .story .tab-content .story-details {
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media (max-width: 767px) {
@@ -2235,7 +2237,7 @@ footer .copyright {
 }
 
 .events .map {
-  height: 424px;
+  height: 475px;
   border: 6px solid #e6e6e6;
 }
 
@@ -2486,7 +2488,8 @@ footer .copyright {
 }
 
 .rsvp .rsvp-form-wrapper {
-  background: #fff url(../images/rsvp-pattern.png);
+  /* background: #fff url(../images/rsvp-pattern.png); */
+  background: #fff;
   text-align: center;
   padding: 50px;
   position: relative;
