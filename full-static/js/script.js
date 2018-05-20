@@ -198,8 +198,8 @@
     if ($("#clock").length) {
         $('#clock').countdown('2018/08/17', function(event) {
             var $this = $(this).html(event.strftime(''
-            + '<div class="box"><div>%m</div> <span>Months</span> </div>'
-            + '<div class="box"><div>%-d</div> <span>Days</span> </div>'
+            + '<div class="box"><div>%-m</div> <span>Months</span> </div>'
+            + '<div class="box"><div>%-n</div> <span>Days</span> </div>'
             + '<div class="box"><div>%-H</div> <span>Hours</span> </div>'
             + '<div class="box"><div>%M</div> <span>Minutes</span> </div>'
             + '<div class="box"><div>%S</div> <span>Seconds</span> </div>'));
@@ -357,59 +357,59 @@
     /*------------------------------------------
         = RSVP FORM SUBMISSION
     -------------------------------------------*/  
-    if ($("#rsvp-form").length) {
-        $("#rsvp-form").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-                email: "required",
+    // if ($("#rsvp-form").length) {
+    //     $("#rsvp-form").validate({
+    //         rules: {
+    //             name: {
+    //                 required: true,
+    //                 minlength: 2
+    //             },
+    //             email: "required",
                 
-                guest: {
-                    required: true
-                },
+    //             guest: {
+    //                 required: true
+    //             },
                 
-                events: {
-                    required: true
-                }
+    //             events: {
+    //                 required: true
+    //             }
 
-            },
+    //         },
 
-            messages: {
-                name: "Please enter your name",
-                email: "Please enter your email",
-                guest: "Select your number of guest",
-                events: "Select your event list"
-            },
+    //         messages: {
+    //             name: "Please enter your name",
+    //             email: "Please enter your email",
+    //             guest: "Select your number of guest",
+    //             events: "Select your event list"
+    //         },
 
-            submitHandler: function (form) {
-                $("#loader").css("display", "inline-block");
-                $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
-                        }, 3000);
-                        form.reset();
-                    },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 3000);
-                    }
-                });
-                return false; // required to block normal submit since you used ajax
-            }
+    //         submitHandler: function (form) {
+    //             $("#loader").css("display", "inline-block");
+    //             $.ajax({
+    //                 type: "POST",
+    //                 url: "mail.php",
+    //                 data: $(form).serialize(),
+    //                 success: function () {
+    //                     $( "#loader").hide();
+    //                     $( "#success").slideDown( "slow" );
+    //                     setTimeout(function() {
+    //                     $( "#success").slideUp( "slow" );
+    //                     }, 3000);
+    //                     form.reset();
+    //                 },
+    //                 error: function() {
+    //                     $( "#loader").hide();
+    //                     $( "#error").slideDown( "slow" );
+    //                     setTimeout(function() {
+    //                     $( "#error").slideUp( "slow" );
+    //                     }, 3000);
+    //                 }
+    //             });
+    //             return false; // required to block normal submit since you used ajax
+    //         }
 
-        });
-    }
+    //     });
+    // }
 
 
     /*==========================================================================
