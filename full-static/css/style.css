@@ -28,6 +28,24 @@ URL:            http://themeforest.net/user/astheme
   border: solid black;
 } */
 
+.gold-btn {
+  background-color: #bfb163;
+  /* width: 35px;
+  height: 35px;
+  line-height: 35px; */
+  display: block;
+  color: #000;
+  text-align: center;
+  border: none;
+  border-radius: 0px;
+}
+
+.temoin-pic {
+  width:100%;
+  min-height: 300px;
+  background-position: center;
+}
+
 .vcenter {
   display: inline-block;
   vertical-align: middle;
@@ -204,7 +222,7 @@ ul {
 }
 
 #clock .box {
-  width: 25%;
+  width: 20%;
   float: left;
   padding: 15px 0;
 }
@@ -534,10 +552,10 @@ ul {
 .gallery .box .details,
 .gallery .box .fade-icon {
   background-color: rgba(0, 0, 0, 0.7);
-  /* width: 100%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
   text-align: center;
-  /* position: absolute; */
+  position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
@@ -554,9 +572,9 @@ ul {
 .bridesmaids .box .fade-icon > div,
 .gallery .box .details > div,
 .gallery .box .fade-icon > div {
-  /* width: 100%; */
+  width: 100%;
   text-align: center;
-  /* position: absolute; */
+  position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2391,6 +2409,143 @@ footer .copyright {
 /*--------------------------------------------------------------
 # gallery
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# important-people
+--------------------------------------------------------------*/
+.gallery {
+  padding-bottom: 105px;
+}
+
+.gallery .section-holder .container {
+  padding-left: 15px !important;
+}
+
+@media (max-width: 991px) {
+  .gallery .groomsmen {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery .groomsmen {
+    margin-bottom: 45px;
+  }
+}
+
+.gallery .groomsmen,
+.gallery .bridesmaids {
+  position: relative;
+}
+
+.gallery .groomsmen h3,
+.gallery .bridesmaids h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #595959;
+  margin: 0 0 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 767px) {
+  .gallery .groomsmen h3,
+  .gallery .bridesmaids h3 {
+    font-size: 18px;
+  }
+}
+
+.gallery .groomsmen .owl-controls,
+.gallery .bridesmaids .owl-controls {
+  position: absolute;
+  top: -70px;
+}
+
+@media (max-width: 767px) {
+  .gallery .groomsmen .owl-controls,
+  .gallery .bridesmaids .owl-controls {
+    top: -60px;
+  }
+}
+
+.gallery .groomsmen .owl-controls .owl-prev,
+.gallery .groomsmen .owl-controls .owl-next,
+.gallery .bridesmaids .owl-controls .owl-prev,
+.gallery .bridesmaids .owl-controls .owl-next {
+  background-color: #bfb163;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+.gallery .groomsmen .owl-controls .owl-prev:hover,
+.gallery .groomsmen .owl-controls .owl-next:hover,
+.gallery .bridesmaids .owl-controls .owl-prev:hover,
+.gallery .bridesmaids .owl-controls .owl-next:hover {
+  background-color: #aa9a45;
+}
+
+@media (max-width: 767px) {
+  .gallery .groomsmen .owl-controls .owl-prev,
+  .gallery .groomsmen .owl-controls .owl-next,
+  .gallery .bridesmaids .owl-controls .owl-prev,
+  .gallery .bridesmaids .owl-controls .owl-next {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+  .gallery .groomsmen .owl-controls .owl-prev i,
+  .gallery .groomsmen .owl-controls .owl-next i,
+  .gallery .bridesmaids .owl-controls .owl-prev i,
+  .gallery .bridesmaids .owl-controls .owl-next i {
+    font-size: 12px;
+  }
+}
+
+.gallery .groomsmen .owl-controls .owl-next,
+.gallery .bridesmaids .owl-controls .owl-next {
+  margin: 0;
+}
+
+.gallery .groomsmen .owl-controls {
+  right: 0;
+}
+
+.gallery .bridesmaids h3 {
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .gallery .bridesmaids h3 {
+    text-align: left;
+  }
+}
+
+.gallery .bridesmaids .owl-controls {
+  left: 0;
+}
+
+@media (max-width: 991px) {
+  .gallery .bridesmaids .owl-controls {
+    left: auto;
+    right: 0;
+  }
+}
+
+.gallery .item .row > .col {
+  padding-right: 0;
+  margin-bottom: 15px;
+}
+
+
+
 .gallery {
   background-color: #edecec;
   position: relative;
@@ -2426,7 +2581,7 @@ footer .copyright {
 /*--------------------------------------------------------------
 # gift-registry
 --------------------------------------------------------------*/
-.gift-registry .sponsors > .col {
+.gift-re  gistry .sponsors > .col {
   margin-bottom: 25px;
 }
 

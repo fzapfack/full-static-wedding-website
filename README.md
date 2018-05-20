@@ -1,0 +1,1 @@
+ convert img8.jpg -resize 362x300^ -gravity north -extent 362x300 img8b.jpg
